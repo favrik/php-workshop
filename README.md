@@ -27,3 +27,4 @@ De menor a mayor complejidad.
 ### Otros
 * [PHP no framework](https://github.com/PatrickLouys/no-framework-tutorial)
 * [awesome PHP links](https://github.com/ziadoz/awesome-php)
+* [Learn Code the Hard way](https://learncodethehardway.org)

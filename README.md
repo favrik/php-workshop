@@ -1,5 +1,6 @@
 # Taller de PHP
 Información sobre el taller de PHP que se llevó acabo los días 12, 13 y 14 de Octubre del 2016 en el Instituto Tecnológico de Mexicali.
+Presentación: http://slides.com/favrik/php
 
 ## Temario
 1. Variables

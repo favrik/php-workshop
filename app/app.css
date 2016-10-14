@@ -11,6 +11,17 @@ body, input {
   font-size: 22px;
 }
 
+table input {
+  width: 90%;
+}
+
+table input[type=submit] {
+  width: 20%;
+}
+input {
+  padding: 10px;
+}
+
 .container {
   background: #fff;
   box-shadow: 1px 1px 30px 1px rgba(50,50,50,0.75);
@@ -32,6 +43,12 @@ h1 {
   box-shadow: 0px 2px 25px -6px rgba(148,148,148,0.51);
 }
 
+h2 {
+  margin: 0;
+  padding: 20px;
+  font-weight: normal;
+}
+
 td, th {
   padding: 20px 30px;
   text-align: left;
@@ -41,11 +58,13 @@ td, th {
 td {
   border-bottom: 1px solid #ddd;
   line-height: 1.8em;
+  border-left: 1px solid #ccc;
 }
 
 th {
   background: #111;
   color: #fff;
+  border-left: 1px solid #eee;
 }
 
 table {

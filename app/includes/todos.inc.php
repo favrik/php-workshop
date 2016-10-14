@@ -7,17 +7,35 @@ class TodoList {
     $this->pdo = $pdo;
   }
 
-  function create($data) {
-    if (isset($data['todo'])) {
-      $stmt = $this->pdo->prepare('
-        INSERT INTO todos(title, completed) VALUES(:title, :completed)'
-      );
-      $stmt->execute(['title' => $data['todo'], 'completed' => 0]);
+  function create($todo) {
+    $stmt = $this->pdo->prepare('
+      INSERT INTO todos(title, completed) VALUES(:title, :completed)'
+    );
+    $stmt->execute(['title' => $todo, 'completed' => 0]);
 
-      return $this->pdo->lastInsertId();
-    }
+    return $this->pdo->lastInsertId();
+  }
 
-    return false;
+  function get($id) {
+    $stmt = $this->pdo->prepare('SELECT * FROM todos WHERE id = :id');
+    $stmt->execute(['id' => $id]);
+    return $stmt->fetch();
+  }
+
+  function edit($todo) {
+    $stmt = $this->pdo->prepare('
+      UPDATE todos
+      SET title = :title, completed = :completed
+      WHERE id = :id
+    ');
+
+    $stmt->execute([
+      'id' => $todo['id'],
+      'title' => $todo['title'],
+      'completed' => isset($todo['completed']) ? 1 : 0,
+    ]);
+
+    return $stmt->rowCount();
   }
 
   function all() {

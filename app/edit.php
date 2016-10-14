@@ -6,9 +6,9 @@ require 'includes/todos.inc.php';
 // Crear un objeto para interactuar con la db.
 $todoList = new TodoList($pdo);
 
-// Checar si necesitamos agregar una nueva actividad.
-if (isset($_POST['todo'])) {
-  if ($todoList->create($_POST['todo'])) {
+// Checar si hay que guardar cambios
+if (isset($_POST['id'])) {
+  if ($todoList->edit($_POST)) {
     header('Location: /');
     exit;
   }
@@ -16,7 +16,7 @@ if (isset($_POST['todo'])) {
 
 // Crear variables para la vista.
 $title = 'Mis Actividades';
-$tasks = $todoList->all();
-$statuses = $todoList->stats();
+$include_edit_view = isset($_GET['id']);
+$edit_todo = $todoList->get($_GET['id']);
 
-require 'views/index.view.php';
+require 'views/edit.view.php';

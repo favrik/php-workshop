@@ -2,7 +2,7 @@
   <head>
     <title><?php echo $title; ?></title>
     <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Roboto" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="Napp.css?<?php echo time(); ?>">
+    <link rel="stylesheet" type="text/css" href="app.css?<?php echo time(); ?>">
   </head>
   <body>
 

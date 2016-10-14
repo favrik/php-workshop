@@ -16,7 +16,7 @@
         </div>
         <br />
         <label for="thing">¿Qué quieres hacer?</label>
-        <input type="text" name="thing" id="thing" />
+        <input type="text" name="todo" id="thing" />
         <input type="submit" value="Agregar" />
       </form>
 

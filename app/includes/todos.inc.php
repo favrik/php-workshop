@@ -7,6 +7,19 @@ class TodoList {
     $this->pdo = $pdo;
   }
 
+  function create($data) {
+    if (isset($data['todo'])) {
+      $stmt = $this->pdo->prepare('
+        INSERT INTO todos(title, completed) VALUES(:title, :completed)'
+      );
+      $stmt->execute(['title' => $data['todo'], 'completed' => 0]);
+
+      return $this->pdo->lastInsertId();
+    }
+
+    return false;
+  }
+
   function all() {
     return $this->pdo->query('
       SELECT id, title, IF(completed, "Sí", "No") AS completed

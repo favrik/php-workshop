@@ -1,8 +1,12 @@
 <?php
 
-require 'db.inc.php';
-
+require 'includes/db.inc.php';
+require 'includes/todos.inc.php';
 
 $title = 'Mis Actividades';
 
-require 'index.view.php';
+$todoList = new TodoList($pdo);
+$tasks = $todoList->all();
+$statuses = $todoList->stats();
+
+require 'views/index.view.php';

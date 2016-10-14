@@ -1,18 +1,13 @@
 body {
-
-
-background: #24C6DC; /* fallback for old browsers */
-background: -webkit-linear-gradient(to left, #24C6DC , #514A9D); /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to left, #24C6DC , #514A9D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        
+  background: #24C6DC; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #24C6DC , #514A9D); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #24C6DC , #514A9D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   padding: 0;
   margin: 0;
   font-family: 'Roboto', sans-serif;
-  font-size: 22px;
-
 }
 
-input {
+body, input {
   font-size: 22px;
 }
 
@@ -33,29 +28,12 @@ h1 {
   font-family: 'Bungee Inline';
   border-top: 8px solid #000;
   -webkit-box-shadow: 0px 2px 25px -6px rgba(148,148,148,0.51);
--moz-box-shadow: 0px 2px 25px -6px rgba(148,148,148,0.51);
-box-shadow: 0px 2px 25px -6px rgba(148,148,148,0.51);
+  -moz-box-shadow: 0px 2px 25px -6px rgba(148,148,148,0.51);
+  box-shadow: 0px 2px 25px -6px rgba(148,148,148,0.51);
 }
-
-p, li {
-  line-height: 1.8em;
-}
-
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-li {
-
-}
-
-
 
 td, th {
-  padding: 15px 30px;
+  padding: 20px 30px;
   text-align: left;
   font-size: 18px;
 }
@@ -65,8 +43,8 @@ td {
 }
 
 th {
-  font-size: 20px;
-  padding-bottom: 15px;
+  background: #111;
+  color: #fff;
 }
 
 table {

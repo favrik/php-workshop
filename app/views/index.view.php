@@ -2,7 +2,7 @@
   <head>
     <title><?php echo $title; ?></title>
     <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Roboto" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="app.css?<?php echo time(); ?>">
+    <link rel="stylesheet" type="text/css" href="app.css">
   </head>
   <body>
 
@@ -10,10 +10,11 @@
       <h1><?php echo $title; ?></h1>
       <form method="post" action="">
         <div class="stats">
-          <span><strong>Total:</strong> 4</span>
-          <span><strong>Completadas:</strong> 1</span>
-          <span><strong>Por completar:</strong> 3</span>
+          <span><strong>Total:</strong> <?php echo $statuses['total'] ?></span>
+          <span><strong>Completadas:</strong> <?php echo $statuses['completed'] ?></span>
+          <span><strong>Por completar:</strong> <?php echo $statuses['todo'] ?></span>
         </div>
+        <br />
         <label for="thing">¿Qué quieres hacer?</label>
         <input type="text" name="thing" id="thing" />
         <input type="submit" value="Agregar" />
@@ -29,19 +30,14 @@
           </tr>
         </thead>
         <tbody>
+          <?php foreach ($tasks as $task): ?>
           <tr>
-            <td>1</td>
-            <td>Hacer tarea de programación</td>
-            <td>Si</td>
+            <td><?php echo $task['id'] ?></td>
+            <td><?php echo $task['title'] ?></td>
+            <td><?php echo $task['completed'] ?></td>
             <td><a href="#">Editar</a></td>
           </tr>
-
-          <tr>
-            <td>1</td>
-            <td>Hacer tarea de programación</td>
-            <td>Si</td>
-            <td><a href="#">Editar</a></td>
-          </tr>
+          <?php endforeach; ?>
         </tbody>
       </table>
 

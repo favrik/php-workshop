@@ -9,6 +9,6 @@ $pdo_opt = [
 $pdo = new PDO(
   'mysql:host=localhost;dbname=todos;charset=utf8',
   'root',
-  'k',
+  '1234',
   $pdo_opt
 );

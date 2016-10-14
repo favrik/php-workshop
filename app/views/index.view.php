@@ -35,7 +35,10 @@
             <td><?php echo $task['id'] ?></td>
             <td><?php echo $task['title'] ?></td>
             <td><?php echo $task['completed'] ?></td>
-            <td><a href="/edit.php?id=<?php echo $task['id'] ?>">Editar</a></td>
+            <td>
+              <a href="/edit.php?id=<?php echo $task['id'] ?>">Editar</a>
+              <a href="/delete.php?id=<?php echo $task['id'] ?>">Borrar</a>
+            </td>
           </tr>
           <?php endforeach; ?>
         </tbody>
@@ -44,4 +47,3 @@
     </div>
   </body>
 </html>
-

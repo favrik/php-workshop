@@ -38,6 +38,18 @@ class TodoList {
     return $stmt->rowCount();
   }
 
+  function delete($id) {
+    $stmt = $this->pdo->prepare('
+      DELETE FROM todos WHERE id = :id
+    ');
+
+    $stmt->execute([
+      'id' => $id,
+    ]);
+
+    return $stmt->rowCount();
+  }
+
   function all() {
     return $this->pdo->query('
       SELECT id, title, IF(completed, "Sí", "No") AS completed

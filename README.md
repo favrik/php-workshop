@@ -1,5 +1,5 @@
 # Taller de PHP
-Información sobre el taller de PHP que se llevó acabo los días 12, 13 y 14 de Octubre del 2016 en el Instituto Tecnológico de Mexicali.
+Información sobre el taller de PHP básico que se llevó acabo los días 12, 13 y 14 de Octubre del 2016 en el Instituto Tecnológico de Mexicali.
 Presentación: http://slides.com/favrik/php
 
 ## Temario
@@ -10,6 +10,13 @@ Presentación: http://slides.com/favrik/php
 5. Clases
 6. PDO
 7. Aplicación mínima viable: ToDo list
+
+## Aplicación mínima
+El progreso de la aplicación de ejemplo esta en diferentes branches: 
+* `1-database` - crea una conexión inicial con la base de datos
+* `2-list` - lista las filas de una tabla
+* `3-add` - puede agregar nuevas filas
+* `4-edit` - permite la edición de las filas o "records" de la tabla.  También incluye como eliminar filas.
 
 ## Enlaces recomendados
 De menor a mayor complejidad.
